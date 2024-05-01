@@ -4,7 +4,7 @@ public class OrderSearchBatch implements Database.Batchable<sObject> {
         // Start method, return the query locator
         return Database.getQueryLocator([
             SELECT Id, Name 
-            FROM Order__c 
+            FROM Account__c 
             WHERE Quantity__c = 10 // Example search key
         ]);
     }
