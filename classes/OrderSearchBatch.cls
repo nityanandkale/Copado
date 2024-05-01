@@ -22,16 +22,4 @@ public class OrderSearchBatch implements Database.Batchable<sObject> {
 
     public void execute(Database.BatchableContext BC, List<sObject> scope) {
         // Example execution logic for Order__c records
-        for (sObject s : scope) {
-            Order__c order = (Order__c)s;
-            // Logic to update orders or related records
-            order.PaymentAmount__c = this.paymentAmount; // Update payment amount
-        }
-        // Perform DML operation outside the loop
-        update scope;
-    }
-
-    public void finish(Database.BatchableContext BC) {
-        // Optional: Add logic to execute after the batch completes
-    }
-}
+        
